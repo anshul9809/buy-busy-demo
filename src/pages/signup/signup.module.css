@@ -1,0 +1,87 @@
+.main{
+    width: 100%;
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 30%;
+    color: #fefefe;
+    letter-spacing: 1px;
+}
+.inputForm{
+    box-sizing: border-box;
+    padding: 30px;
+    text-align: center;
+    display: grid;
+    gap: 10px;
+    grid-template-rows: 1fr 3fr;
+    border-radius: 94px;
+    background: #292929;
+    box-shadow:  -20px 20px 40px #151515,
+                20px -20px 40px #1f1f1f;
+}
+.inputForm form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.inputForm input{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    box-sizing: border-box;
+    height: 45px;
+    padding: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    border: none;
+    appearance: none;
+    background-color: #151515;
+    color: #f0f0f0;
+    border-radius: 10px;
+}
+
+
+         
+.btn_grad {
+    background-image: linear-gradient(to right, #7e7e7e 0%, #999999  51%, #353535  100%);
+    margin: 10px;
+    padding: 15px 45px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #3f3f3f;
+    border-radius: 10px;
+    display: block;
+    font-size: 1.6rem;
+    cursor: pointer;
+}
+
+.btn_grad:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}
+.link{
+    font-size: 1.2rem;
+}
+
+
+
+/* Responsive Design */
+
+@media only screen and (max-width: 1024px) {
+    .container{
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container{
+        width: 90%;
+    }
+}

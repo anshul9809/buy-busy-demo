@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import styles from "./signup.module.css";
+import { NavLink } from "react-router-dom";
 import { useAuthContext } from "../../authContext";
 export default function SignUp(){
     const nameRef=useRef();
@@ -19,7 +20,7 @@ export default function SignUp(){
     }
     return (
         <>
-            <main>
+            <main className={styles.main}>
                 <div className={styles.container}>
                     <div className={styles.inputForm}>
                         {/* heading */}
@@ -42,9 +43,13 @@ export default function SignUp(){
                                 required
                                 ref={passwordRef} />
                             {/* submit button */}
-                            <button>Submit</button>
+                            <button className={styles.btn_grad}>Submit</button>
                         </form>
+                        <div>
+                            <p>Already have an account? <NavLink to="/signin" className={styles.link}>Sign In</NavLink></p>
+                        </div>
                     </div>
+
                 </div>
             </main>
         </>

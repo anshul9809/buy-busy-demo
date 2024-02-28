@@ -1,4 +1,4 @@
-import styles from "./signin.module.css";
+import styles from "../signup/signup.module.css";
 import { createRef } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import { useAuthContext } from "../../authContext";
@@ -42,14 +42,17 @@ export default function SignIn(){
                         ref={passwordRef} />
                     <br />
                     {/* submit button */}
-                    <button>Submit</button>
+                    <button className={styles.btn_grad}>Submit</button>
                 </form>
                 <br /> 
                 <span>or &nbsp;</span>
                 {/* link for signup page */}
-                <NavLink to="/signup">
-                    Create New Account
+                <p>Don't have an account? &nbsp;
+                <NavLink to="/signup" className={styles.link}>
+                    Create
                 </NavLink>
+                </p>
+                
             </div>
             
         </div>
